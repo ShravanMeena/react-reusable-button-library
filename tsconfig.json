@@ -15,5 +15,5 @@
         "strict": true,
         "target": "es6"
     },
-    "include": ["src/**/*.ts", "src/**/*.tsx", "src/components/Button.ts", "src/components/index.js"]
+    "include": ["src/**/*.ts", "src/**/*.tsx", "src/components/Button.ts", "src/components/index.js", "src/index.js"]
 }
