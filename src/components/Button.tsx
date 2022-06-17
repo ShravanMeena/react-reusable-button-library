@@ -20,3 +20,19 @@ export const Button: React.FunctionComponent<IButtonProps> = (props) => {
         </button>
     );
 };
+
+export const CircleButton: React.FunctionComponent<IButtonProps> = (props) => {
+    const { children, backgroundColor, color, style } = props;
+
+    let _style: React.CSSProperties = style || {};
+
+    /** Override Defaults */
+    if (backgroundColor && _style) _style.backgroundColor = backgroundColor;
+    if (color && _style) _style.color = color;
+
+    return (
+        <button style={{ ..._style, padding: 10, border: '4px solid red', borderRadius: 100 }} {...props}>
+            {children}
+        </button>
+    );
+};
