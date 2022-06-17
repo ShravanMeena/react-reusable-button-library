@@ -4,8 +4,18 @@
         "type": "git",
         "url": "https://github.com/shravanmeena/react-reusable-button-library.git"
     },
-    "version": "1.0.1",
-    "description": "A component library for getting people started with easy to re-use components for everyday projects.",
+    "bugs": {
+        "url": "https://github.com/ShravanMeena/react-reusable-button-library/issues"
+    },
+    "publishConfig": {
+        "access": "public",
+        "branches": [
+            "main"
+        ]
+    },
+    "homepage": "https://github.com/ShravanMeena/react-reusable-button-library#readme",
+    "version": "1.0.2",
+    "description": "A component library for getting people started with easy to re-use button components for everyday projects.",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
     "files": [
