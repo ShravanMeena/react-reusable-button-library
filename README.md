@@ -2,8 +2,12 @@
 
 ![N|Solid](https://lh3.googleusercontent.com/a-/AOh14GglnMoBPixoeH-IwaCWx7SpehtvYTPowns21fVO=s200-k-no-rp-mo)
 
-Learn how to make a component library!  Link is in the repository description.
+`A component library for getting people started with easy to re-use button components for everyday projects`
 
-License
-----
+Learn how to make a component library!
+
+### NOTE: This component library is only for test:: DON'T use in your project
+
+## License
+
 MIT

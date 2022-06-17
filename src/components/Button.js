@@ -32,7 +32,7 @@ export function Button(props) {
     if (color && _style) _style.color = color;
 
     return (
-        <div style={_style} {...props}>
+        <div style={{ ..._style, backgroundColor: 'pink' }} {...props}>
             {children}
         </div>
     );
