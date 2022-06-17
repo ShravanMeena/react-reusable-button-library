@@ -7,10 +7,12 @@ export interface ButtonProps {
     colorScheme: string;
     style: object;
     variant: string;
+    leftIcon: any;
+    rightIcon: any;
 }
 
 const Button = (props: ButtonProps) => {
-    let { label, color, size, colorScheme, style, variant } = props;
+    let { label, color, size, colorScheme, style, variant, leftIcon, rightIcon } = props;
 
     let backgroundColor;
     let sizeStyle = {};
@@ -66,7 +68,7 @@ const Button = (props: ButtonProps) => {
     } else if (colorScheme === 'blue') {
         backgroundColor = '#3182ce';
     } else if (colorScheme === 'cyan') {
-        backgroundColor = '#0bcc5ea';
+        backgroundColor = '#0bc5ea';
         color = '#000';
     } else if (colorScheme === 'purple') {
         backgroundColor = '#805ad5';
@@ -93,18 +95,22 @@ const Button = (props: ButtonProps) => {
         <button
             {...props}
             style={{
-                backgroundColor: variant === 'outline' ? 'transparent' : backgroundColor,
-                color: variant === 'outline' ? backgroundColor : color || '#fff',
+                backgroundColor: variant === 'outlined' ? 'transparent' : backgroundColor,
+                color: variant === 'outlined' ? backgroundColor : color || '#fff',
                 fontWeight: 'bold',
                 border: `1px solid ${backgroundColor}`,
                 outline: 'none',
                 borderRadius: 4,
                 cursor: 'pointer',
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'space-around',
                 ...sizeStyle,
                 ...style
             }}
         >
-            {label || 'Button'}
+            {leftIcon && <span>{leftIcon}</span>} {label || 'Button'} {rightIcon && <span>{rightIcon}</span>}
         </button>
     );
 };
