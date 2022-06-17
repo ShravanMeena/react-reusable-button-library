@@ -6,38 +6,40 @@ export interface ButtonProps {
     size: string;
     colorScheme: string;
     style: object;
+    variant: string;
 }
 
 const Button = (props: ButtonProps) => {
-    let { label, color, size, colorScheme, style } = props;
+    let { label, color, size, colorScheme, style, variant } = props;
 
-    let sizeStyle = {};
     let backgroundColor;
+    let sizeStyle = {};
+
     if (size === 'xs') {
         sizeStyle = {
             minWidth: 60,
-            height: 30,
+            minHeight: 30,
             fontSize: 12,
             padding: '2px 8px'
         };
     } else if (size === 'sm') {
         sizeStyle = {
             minWidth: 70,
-            height: 32,
+            minHeight: 32,
             fontSize: 14,
             padding: '3px 12px'
         };
     } else if (size === 'md') {
         sizeStyle = {
             minWidth: 85,
-            height: 35,
+            minHeight: 35,
             fontSize: 16,
             padding: '4px 16px'
         };
     } else if (size === 'lg') {
         sizeStyle = {
             minWidth: 100,
-            height: 45,
+            minHeight: 45,
             fontSize: 18,
             padding: '5px 20px'
         };
@@ -91,10 +93,10 @@ const Button = (props: ButtonProps) => {
         <button
             {...props}
             style={{
-                backgroundColor,
-                color: color || '#fff',
+                backgroundColor: variant === 'outline' ? 'transparent' : backgroundColor,
+                color: variant === 'outline' ? backgroundColor : color || '#fff',
                 fontWeight: 'bold',
-                border: 'none',
+                border: `1px solid ${backgroundColor}`,
                 outline: 'none',
                 borderRadius: 4,
                 cursor: 'pointer',

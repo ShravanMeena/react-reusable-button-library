@@ -6,8 +6,6 @@
 
 Learn how to make a component library!
 
-### NOTE: This component library is only for test:: DON'T use in your project
-
 ## License
 
 MIT
