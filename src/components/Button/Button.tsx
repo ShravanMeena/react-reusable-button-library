@@ -9,10 +9,11 @@ export interface ButtonProps {
     variant: string;
     leftIcon: any;
     rightIcon: any;
+    loading: boolean;
 }
 
 const Button = (props: ButtonProps) => {
-    let { label, color, size, colorScheme, style, variant, leftIcon, rightIcon } = props;
+    let { label, color, size, colorScheme, style, variant, leftIcon, rightIcon, loading } = props;
 
     let backgroundColor;
     let sizeStyle = {};
@@ -110,7 +111,13 @@ const Button = (props: ButtonProps) => {
                 ...style
             }}
         >
-            {leftIcon && <span>{leftIcon}</span>} {label || 'Button'} {rightIcon && <span>{rightIcon}</span>}
+            {loading ? (
+                'Loading...'
+            ) : (
+                <>
+                    {leftIcon && <span>{leftIcon}</span>} {label || 'Button'} {rightIcon && <span>{rightIcon}</span>}
+                </>
+            )}
         </button>
     );
 };
