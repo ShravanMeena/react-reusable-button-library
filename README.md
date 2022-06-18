@@ -12,7 +12,9 @@ npm i react-reusable-button-library
 
 ## Import
 
-javascript import { Button } from 'react-reusable-button-library';
+```
+import { Button } from 'react-reusable-button-library';
+```
 
 ## Styling with plain CSS
 
@@ -32,7 +34,7 @@ Use the `size` prop to change the size of the button. You can set the `value` 
 
 ![Button sizes](https://i.ibb.co/7G2rpFj/buttonsize.jpg)
 
-javascript
+```
 
 <Stack row wrap >
     <Button size="xs">Button</Button>
@@ -41,18 +43,22 @@ javascript
     <Button size="lg">Button</Button>
 </Stack>
 
+```
+
 ## Button Variants
 
 Use the `variant` prop to change the visual style of the Button. You can set the `value` to  `outlined`.
 
 ![Button variant](https://i.ibb.co/F6ws1HN/buttonvariant.jpg)
 
-javascript
+```
 
 <Stack row >
     <Button>Button</Button>
     <Button variant="outlined">Button</Button>
 </Stack>
+
+```
 
 ## Button Colors
 
@@ -60,7 +66,7 @@ Use the `colorScheme` prop to change the color scheme of the Button. You can set
 
 ![Button sizes](https://i.ibb.co/JdgJv7L/buttoncolor.jpg)
 
-javascript
+```
 
 <Stack spacing={2} row wrap >
         <Button>Button</Button>
@@ -80,31 +86,35 @@ javascript
         <Button colorScheme="telegram" >Button</Button>
 </Stack>
 
+```
+
 ## Social Buttons
 
 We've included the colors for common `social media` platforms, and you can simply use their buttons via the `colorScheme` prop.
 
 ![Social buttons](https://i.ibb.co/GHzpWtn/social.jpg)
 
-javascript
+```
 
 <Stack row >
   <Button colorScheme="facebook">
     Facebook
   </Button>
-            
-  <Button colorScheme="twitter" 
+
+  <Button colorScheme="twitter"
     Twitter
   </Button>
-            
-  <Button colorScheme="telegram" 
+
+  <Button colorScheme="telegram"
     Telegram
    </Button>
-           
+
   <Button colorScheme="whatsapp">
     Whatsapp
-   </Button>     
+   </Button>
 </Stack>
+
+```
 
 ## Button with Icons
 
@@ -112,12 +122,14 @@ We've included the left and right icons button.
 
 ![Social buttons](https://i.ibb.co/FXR4fdk/button-With-Icon.jpg)
 
-javascript
+```
 
 <Stack>
     <Button leftIcon={<IoMdArrowBack />}Button></Button>
     <Button rightIcon={<IoMdArrowForward />} >Button</Button>
 </Stack>
+
+```
 
 ## License
 
