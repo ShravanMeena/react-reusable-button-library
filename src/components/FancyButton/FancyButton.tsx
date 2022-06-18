@@ -1,5 +1,5 @@
 import React from 'react';
-// import './FancyButton.css';
+import './FancyButton.css';
 
 export interface ButtonProps {
     type: string;
@@ -10,7 +10,7 @@ const FancyButton = (props: ButtonProps) => {
     let { children, type } = props;
 
     return (
-        <button>
+        <button className={`icon icon-${type}`}>
             <span>{children || '🚀'}</span>
         </button>
     );
