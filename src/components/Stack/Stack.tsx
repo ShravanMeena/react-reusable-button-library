@@ -4,11 +4,11 @@ export interface StackProps {
     spacing: number;
     wrap: boolean;
     children: any;
-    flexDirection: string;
+    row: boolean;
 }
 
 const Stack = (props: StackProps) => {
-    let { children, spacing = 2, flexDirection, wrap } = props;
+    let { children, spacing = 2, row, wrap } = props;
 
     return (
         <div
@@ -16,7 +16,7 @@ const Stack = (props: StackProps) => {
                 display: 'flex',
                 gap: `${spacing * 0.25}rem`,
                 flexWrap: wrap ? 'wrap' : 'nowrap',
-                flexDirection: 'row'
+                flexDirection: row ? 'row' : 'column'
             }}
         >
             {children}
