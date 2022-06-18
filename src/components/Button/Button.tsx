@@ -10,10 +10,12 @@ export interface ButtonProps {
     leftIcon: any;
     rightIcon: any;
     loading: boolean;
+    loadingText: string;
+    children: any;
 }
 
 const Button = (props: ButtonProps) => {
-    let { label, color, size, colorScheme, style, variant, leftIcon, rightIcon, loading } = props;
+    let { children, color, size, colorScheme, style, variant, leftIcon, rightIcon, loading, loadingText } = props;
 
     let backgroundColor;
     let sizeStyle = {};
@@ -112,10 +114,10 @@ const Button = (props: ButtonProps) => {
             }}
         >
             {loading ? (
-                'Loading...'
+                <>{loadingText ? loadingText : 'Loading...'}</>
             ) : (
                 <>
-                    {leftIcon && <span>{leftIcon}</span>} {label || 'Button'} {rightIcon && <span>{rightIcon}</span>}
+                    {leftIcon && <span>{leftIcon}</span>} {` `} <span>{children || 'Button'}</span> {` `} {rightIcon && <span>{rightIcon}</span>}
                 </>
             )}
         </button>

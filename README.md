@@ -1,6 +1,4 @@
-# React Component Library
-
-![N|Solid](https://lh3.googleusercontent.com/a-/AOh14GglnMoBPixoeH-IwaCWx7SpehtvYTPowns21fVO=s200-k-no-rp-mo)
+# React Reusbale Button Library
 
 `A component library for getting people started with easy to re-use button components for everyday projects`
 
