@@ -3,21 +3,25 @@ import React from 'react';
 export interface StackProps {
     spacing: number;
     wrap: boolean;
-    direction: string;
     children: any;
+    flexDirection: string;
 }
 
 const Stack = (props: StackProps) => {
-    let { children, spacing = 2, direction = 'row', wrap = false } = props;
+    let { children, spacing = 2, flexDirection, wrap } = props;
 
-    const style = {
-        display: 'flex',
-        gap: `${spacing * 0.25}rem`,
-        flexWrap: wrap ? 'wrap' : 'nowrap',
-        flexDirection: direction
-    };
-
-    return <div style={style}>{children}</div>;
+    return (
+        <div
+            style={{
+                display: 'flex',
+                gap: `${spacing * 0.25}rem`,
+                flexWrap: wrap ? 'wrap' : 'nowrap',
+                flexDirection: 'row'
+            }}
+        >
+            {children}
+        </div>
+    );
 };
 
 export default Stack;
