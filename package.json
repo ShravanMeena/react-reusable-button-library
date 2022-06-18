@@ -14,26 +14,34 @@
         ]
     },
     "homepage": "https://github.com/ShravanMeena/react-reusable-button-library#readme",
-    "version": "1.1.6",
+    "version": "1.1.7",
     "description": "A component library for getting people started with easy to re-use button components for everyday projects.",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
     "files": [
         "dist"
     ],
+    "types": "dist/index.d.ts",
     "scripts": {
         "build": "rm -rf dist/ && prettier --write src/ && npm run build:esm && npm run build:cjs",
         "build:esm": "tsc",
-        "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
+        "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
+        "rollup": "rollup -c"
     },
     "author": "Shravan Meena",
     "license": "MIT",
     "devDependencies": {
+        "@rollup/plugin-commonjs": "^22.0.0",
+        "@rollup/plugin-node-resolve": "^13.3.0",
+        "@rollup/plugin-typescript": "^8.3.3",
         "@types/node": "^17.0.21",
         "@types/react": "^17.0.37",
         "@types/react-dom": "^17.0.11",
         "react": "^18.1.0",
         "react-dom": "^18.1.0",
+        "rollup": "^2.75.6",
+        "rollup-plugin-dts": "^4.2.2",
+        "tslib": "^2.4.0",
         "typescript": "^4.5.2"
     },
     "peerDependencies": {
