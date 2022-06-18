@@ -6,9 +6,13 @@
 
 ## Installation
 
+```
+
 Install my-library with npm
 
 npm i react-reusable-button-library
+
+```
 
 ## Import
 
@@ -18,9 +22,13 @@ import { Button } from 'react-reusable-button-library';
 
 ## Styling with plain CSS
 
-javascript import { Button } from 'react-reusable-button-library';
+```
+
+import { Button } from 'react-reusable-button-library';
 
 function Button() { return <Button>Button</Button>; }
+
+```
 
 ## Accessibility
 
