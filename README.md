@@ -139,6 +139,42 @@ We've included the left and right icons button.
 
 ```
 
+# _Props_
+
+# _Button Props_
+
+`Button`composes the `Button` component, so you can pass all its props. These are props specific to the `Button`component:
+
+_`colorScheme`_
+
+_Type_
+
+`"gray" | "red" | "orange" | "yellow" | "green" | "teal" | "blue" | "cyan" | "purple" | "pink" | "linkedin" | "facebook" | "messenger" | "whatsapp" | "twitter" | "telegram"`
+
+Default
+
+`"telegram"`
+
+_`size`_
+
+_Type_
+
+`"lg" | "md" | "sm" | "xs"`
+
+_Default_
+
+`"md"`
+
+_`variant`_
+
+_Type_
+
+`"outline" | "solid"`
+
+_Default_
+
+`"solid"`
+
 ## License
 
 MIT
