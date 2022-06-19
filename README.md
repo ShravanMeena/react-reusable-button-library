@@ -4,7 +4,7 @@
 
 ## Documentation
 
-<a href="https://reusablebuttons.netlify.app/" style="font-size::20px; color: red; text-decoration: underline;text-decoration-style: dotted;">Documentation</a>
+<a href="https://reusablebuttons.netlify.app/" style="font-size::20px; color: red; text-decoration: underline;text-decoration-style: dotted;">Documentations</a>
 
 ## Installation
 
